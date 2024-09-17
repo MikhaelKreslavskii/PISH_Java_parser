@@ -22,28 +22,28 @@ public class Main {
         for(String line: resLines)
         {
             System.out.println(line.split(",").length);
-            String [] arr = line.split(",");
-            System.out.println(Arrays.toString(arr));
+            String [] line_from_table = line.split(",");
+            System.out.println(Arrays.toString(line_from_table));
             int len_of_line = line.split(",").length;
-            long id = (long)(Float.parseFloat(arr[0]));
-            String email = arr[1];
-            String phone = arr[2];
-            String address = arr[3];
+            long id = (long)(Float.parseFloat(line_from_table[0]));
+            String email = line_from_table[1];
+            String phone = line_from_table[2];
+            String address = line_from_table[3];
 
             if(len_of_line==11) {
-                String name = arr[4];
-                String surname = arr [5];
-                boolean hasChildren = Boolean.parseBoolean(arr[6]);
-                int age = (int)(Float.parseFloat(arr[7]));
-                BankAccount bankAccount = new BankAccount(arr[8], arr[9],arr[10]);
+                String name = line_from_table[4];
+                String surname = line_from_table [5];
+                boolean hasChildren = Boolean.parseBoolean(line_from_table[6]);
+                int age = (int)(Float.parseFloat(line_from_table[7]));
+                BankAccount bankAccount = new BankAccount(line_from_table[8], line_from_table[9],line_from_table[10]);
                 individuals.add(new Individual(id,email,phone,address,bankAccount,name,surname,hasChildren,age));
 
             }
             if(len_of_line ==9)
             {
-                String companyName = arr[4];
-                CompanyType type= CompanyType.valueOf(arr[5]);
-                BankAccount bankAccount = new BankAccount(arr[6], arr[7],arr[8]);
+                String companyName = line_from_table[4];
+                CompanyType type= CompanyType.valueOf(line_from_table[5]);
+                BankAccount bankAccount = new BankAccount(line_from_table[6], line_from_table[7],line_from_table[8]);
                 companies.add(new Company(id,email,phone,address,bankAccount,companyName,type));
 
             }
