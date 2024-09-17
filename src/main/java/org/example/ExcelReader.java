@@ -13,7 +13,9 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.FileInputStream;
 import java.util.Iterator;
-
+/*
+* класс для чтения таблицы
+* */
 public class ExcelReader {
     private String path;
     ExcelReader(String path)
@@ -21,6 +23,8 @@ public class ExcelReader {
         this.path = path;
     }
 
+
+    ///метод для получения заполненных(не пустых) строк из таблицы
     public List<String> extractLines() throws Exception
     {
         List<String> resLines = new ArrayList<>();

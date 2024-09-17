@@ -25,11 +25,12 @@ public class Main {
             String [] line_from_table = line.split(",");
             System.out.println(Arrays.toString(line_from_table));
             int len_of_line = line.split(",").length;
+            ///хардкод - обращение к атрибутам по индексу
             long id = (long)(Float.parseFloat(line_from_table[0]));
             String email = line_from_table[1];
             String phone = line_from_table[2];
             String address = line_from_table[3];
-
+            ///согласно таблице 11 значений у Individuals(хардкод)
             if(len_of_line==11) {
                 String name = line_from_table[4];
                 String surname = line_from_table [5];
@@ -39,6 +40,7 @@ public class Main {
                 individuals.add(new Individual(id,email,phone,address,bankAccount,name,surname,hasChildren,age));
 
             }
+            ///согласно таблице 9 значений у Company(хардкод)
             if(len_of_line ==9)
             {
                 String companyName = line_from_table[4];

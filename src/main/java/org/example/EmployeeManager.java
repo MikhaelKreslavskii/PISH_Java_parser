@@ -1,7 +1,9 @@
 package org.example;
 
 import java.util.List;
-
+/*
+* класс для управления объектами Employee
+* */
 public class EmployeeManager {
     public static int individualsLessAge(List<Individual> individualList, int age)
     {
